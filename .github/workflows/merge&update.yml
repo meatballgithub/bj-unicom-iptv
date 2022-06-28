@@ -47,7 +47,7 @@ jobs:
       run: |
         cp bj-unicom-iptv.m3u iptv.m3u
         sed -i 's#rtp://#http://192.168.1.1:4000/rtp/#' iptv.m3u
-        if [ -n "git status -s | grep "iptv.m3u"" ];then
+        if [ -n "$(git status -s | grep iptv.m3u)" ];then
           git add iptv.m3u
           git commit -m 'update iptv.m3u'
           echo "update iptv.m3u"
