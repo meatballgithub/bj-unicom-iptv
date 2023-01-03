@@ -2,7 +2,7 @@ name: merge&update
 
 on:
   schedule:
-    - cron: 30 03 * * *
+    - cron: 00 19 * * 0
   push:
     branches:
       - master
